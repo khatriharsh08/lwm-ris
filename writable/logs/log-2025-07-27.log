@@ -1,0 +1,610 @@
+DEBUG - 2025-07-27 11:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 11:58:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/messages.php"
+[Method: GET, Route: wastecategory/view]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/messages.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/messages', null, true)
+ 3 APPPATH\Views\admin\wastecategory\view.php(3): CodeIgniter\View\View->include('admin/messages')
+ 4 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 7 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 11:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 11:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 11:58:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/messages.php"
+[Method: GET, Route: wastecategory/view]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/messages.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/messages', null, true)
+ 3 APPPATH\Views\admin\wastecategory\view.php(3): CodeIgniter\View\View->include('admin/messages')
+ 4 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 7 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:03:07 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:06:45 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:06:46 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:06:47 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:06:47 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:06:48 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:06:53 --> ErrorException: Undefined variable $waste_categories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:44 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:45 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:46 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:47 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:47 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:47 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:48 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:07:51 --> ErrorException: Undefined variable $wastecategories
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:00 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:01 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:02 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:02 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:03 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:03 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:03 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:04 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:04 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:04 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:04 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:05 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 12:09:05 --> ErrorException: Undefined variable $wastecategorie
+[Method: GET, Route: wastecategory/view]
+in APPPATH\Views\admin\wastecategory\view.php on line 57.
+ 1 APPPATH\Views\admin\wastecategory\view.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $wastecategorie', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\wastecategory\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/wastecategory/view', [], true)
+ 5 APPPATH\Controllers\admin\Wastecategory.php(14): view('admin/wastecategory/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wastecategory->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wastecategory))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 12:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 12:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 13:41:20 --> ErrorException: Undefined variable $total_categories
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 21.
+ 1 APPPATH\Views\admin\dashboard.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_categories', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\dashboard.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\Dashboard.php(11): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 13:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 13:42:41 --> ErrorException: Undefined variable $waste_category_count
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 21.
+ 1 APPPATH\Views\admin\dashboard.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $waste_category_count', 'F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\dashboard.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\Future\\tarun\\lwm-ris\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\Dashboard.php(11): view('admin/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 13:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-27 13:49:30 --> Error: Class "App\Controllers\Admin\DashboardModel" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\admin\Dashboard.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('F:\\Future\\tarun\\lwm-ris\\public\\index.php')
+DEBUG - 2025-07-27 13:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-27 13:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

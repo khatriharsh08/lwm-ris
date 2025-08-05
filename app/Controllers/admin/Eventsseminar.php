@@ -73,7 +73,7 @@ class Eventsseminar extends BaseController
 
         if ($model->insert($data)) {
             session()->setFlashdata('success', 'Event added successfully.');
-            return redirect()->to(base_url('eventsseminar/view'));
+            return redirect()->to(base_url('eventsseminar'));
         } else {
             session()->setFlashdata('error', 'Failed to add event.');
             return redirect()->back();

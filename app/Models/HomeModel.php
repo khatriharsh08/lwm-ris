@@ -48,4 +48,26 @@ class HomeModel extends Model
                         ->getResultArray();
     }
 
+    public function getTotalCategories()
+    {        
+        return $this->db->table('lwm_wastecategories')
+                        ->where('is_deleted', '0')
+                        ->countAllResults(); 
+    }
+
+  
+    public function getTotalRecyclingCenters()
+    {       
+        return $this->db->table('lwm_recyclingcenters')
+                        ->where('is_deleted', '0')
+                        ->countAllResults();
+    }
+
+    public function getTotalEvents()
+    {       
+        return $this->db->table('lwm_events')
+                        ->where('date <= NOW()')
+                        ->where('is_deleted', '0')
+                        ->countAllResults();
+    }
 }

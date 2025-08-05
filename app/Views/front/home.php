@@ -9,6 +9,66 @@
 </header>
 
 <main>
+
+<section id="stats-counter" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                    Active Centers</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-map-marker-alt fa-2x text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                    Different Categories</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-list-alt fa-2x text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                    Successful Events/Drives</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar-check fa-2x text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
     <?= $this->include('front/sections/WasteSegregation') ?>
 
     <section id="events" class="py-5">
@@ -63,8 +123,10 @@
             </div>
         </div>
     </section>
+x
 
-    <section class="py-5 bg-light">
+
+    <section id="recyclingcenters" class="py-5 bg-light">
         <div class="container text-center">
             <!-- Heading -->
             <h2 class="section-title mb-4 fw-bold">Find a Recycling Center Near You</h2>

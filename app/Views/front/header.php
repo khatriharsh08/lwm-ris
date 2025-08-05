@@ -96,7 +96,7 @@
                         <a class="nav-link hover-green active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-green" href="#search">Search</a>
+                        <a class="nav-link hover-green" href="#recyclingcenters">Search</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link hover-green" href="#events">Events</a>

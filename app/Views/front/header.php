@@ -66,6 +66,14 @@
             transform: translateY(-3px);
             transition: all 0.3s ease;
         }
+        .green-input {
+            border: 1px solid #2E7D32;
+            color: #1B5E20;
+        }
+        .dropdown-menu-scrollable {
+            max-height: 250px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>

@@ -5,6 +5,7 @@ use App\Controllers\BaseController;
 use App\Models\HomeModel;
 use App\Models\ContactMessageModel;
 use App\Models\CentersModel;
+use App\Models\WasteModel;
 
 class Home extends BaseController
 {
@@ -12,10 +13,12 @@ class Home extends BaseController
     {
         $model = new HomeModel();
         $centerModel = new CentersModel();
+        $wasteList = new WasteModel();
 
         $data['all_upcoming_events'] = $model->getAllUpcomingEvents();
         $data['all_recycling_centers'] = $model->getAllRecyclingCenters();
         $data['all_city'] = $model->getAllCity();
+        $data['waste_types'] = $wasteList->getWasteCategory();
 
         
         return view('front/home', $data);

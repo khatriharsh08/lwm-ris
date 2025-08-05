@@ -6,23 +6,53 @@
                 <h4 class="mb-4">Send us a Message</h4>
                 <div id="form-messages" class="mb-3"></div>
                     <form id="ajax-contact-form" action="<?= site_url('home/sendMessage') ?>" method="POST">
-                    <?= csrf_field() ?>
+                        <?= csrf_field() ?>
+
                         <div class="mb-3">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" 
-                            style="border: 1px solid #2E7D32; color: #1B5E20;" required>
+                            <input type="text" name="name" class="form-control green-input" placeholder="Your Name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
                         </div>
+
                         <div class="mb-3">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" 
-                            style="border: 1px solid #2E7D32; color: #1B5E20;" required>
+                            <input type="email" name="email" class="form-control green-input" placeholder="Your Email" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
                         </div>
+
                         <div class="mb-3">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" 
-                            style="border: 1px solid #2E7D32; color: #1B5E20;" required>
+                            <input type="text" name="subject" class="form-control green-input" placeholder="Subject" required>
+                            <div class="invalid-feedback">Please enter a subject.</div>
                         </div>
+
                         <div class="mb-3">
-                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" 
-                            style="border: 1px solid #2E7D32; color: #1B5E20;" required></textarea>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle green-input w-100 text-start" type="button" id="dropdownWasteCategories" data-bs-toggle="dropdown" aria-expanded="false" >
+                                    Select Categories
+                                </button>
+                                <ul class="dropdown-menu w-100 px-3 dropdown-menu-scrollable" aria-labelledby="dropdownWasteCategories">
+                                    <?php if (!empty($waste_types)): ?>
+                                        <?php foreach ($waste_types as $cat): ?>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="waste_categories[]" value="<?= esc($cat['id']) ?>" id="cat<?= esc($cat['id']) ?>">
+                                                    <label class="form-check-label" for="cat<?= esc($cat['id']) ?>">
+                                                        <?= esc($cat['name']) ?>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <li class="px-2 text-muted">No categories available.</li>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                            <div class="invalid-feedback">Please select a category.</div>
                         </div>
+
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control green-input" rows="5" placeholder="Your Message" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                        </div>
+
                         <button type="submit" class="btn btn-success">Send Message</button>
                     </form>
                 </div>
@@ -42,6 +72,39 @@
 </section>
 
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('ajax-contact-form');
+    if (!form) return;
+
+    const dropdownMenu = form.querySelector('.dropdown-menu');
+    const dropdownButton = document.getElementById('dropdownWasteCategories');
+    
+    if (!dropdownMenu || !dropdownButton) return;
+
+    const checkboxes = dropdownMenu.querySelectorAll('input[type="checkbox"]');
+
+    function updateButtonText() {
+        const checkedCount = Array.from(checkboxes).filter(i => i.checked).length;
+
+        if (checkedCount === 0) {
+            dropdownButton.textContent = 'Select Categories';
+        } else {
+            dropdownButton.textContent = `${checkedCount} Categor${checkedCount > 1 ? 'ies' : 'y'} Selected`;
+        }
+    }
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateButtonText);
+    });
+
+    // Prevents the dropdown from closing when clicking inside it
+    dropdownMenu.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+
+    // Run on page load in case of pre-filled forms
+    updateButtonText();
+});
     
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('ajax-contact-form');

@@ -29,10 +29,17 @@ class WasteModel extends Model
         if (!empty($filters['end_date'])) {
         $endDate = $filters['end_date'] . ' 23:59:59';
         $builder->where('created_at <=', $endDate);
-    }
+        }
 
         $builder->orderBy('id', 'DESC');
 
         return $builder->get()->getResultArray();
+    }
+
+    public function getWasteCategory()
+    {
+        return $this->where('is_deleted', '0')
+                    ->orderBy('name', 'ASC')
+                    ->findAll();
     }
 }

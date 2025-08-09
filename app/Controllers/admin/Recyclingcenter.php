@@ -45,12 +45,13 @@ class Recyclingcenter extends BaseController
     {
        
         $rules = [
-            'name'         => 'required|min_length[3]|max_length[255]',
-            'address'      => 'required|max_length[255]',
-            'city'         => 'required|max_length[100]',
-            'state'        => 'required|max_length[100]',
-            'email'        => 'permit_empty|valid_email|max_length[255]',
-            'phone_number' => 'permit_empty|max_length[20]'
+            'name'              => 'required|min_length[3]|max_length[255]',
+            'waste_categories'  => 'required|min_length[3]|max_length[255]',
+            'address'           => 'required|max_length[255]',
+            'city'              => 'required|max_length[100]',
+            'state'             => 'required|max_length[100]',
+            'email'             => 'permit_empty|valid_email|max_length[255]',
+            'phone_number'      => 'permit_empty|max_length[20]'
         ];
 
         if (!$this->validate($rules)) {
@@ -67,6 +68,7 @@ class Recyclingcenter extends BaseController
             'postal_code'  => $this->request->getPost('postal_code'),
             'phone_number' => $this->request->getPost('phone_number'),
             'email'        => $this->request->getPost('email'),
+            'waste_categories' => $this->request->getPost('waste_categories'),
         ];
 
         if ($model->insert($data)) {

@@ -16,6 +16,7 @@ class CentersModel extends Model
         'postal_code',
         'phone_number',
         'email',
+        'waste_categories',
         'is_deleted'
     ];
 

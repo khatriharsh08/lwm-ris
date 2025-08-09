@@ -15,9 +15,10 @@ class Home extends BaseController
         $centerModel = new CentersModel();
         $wasteList = new WasteModel();
  
-        $data['all_upcoming_events'] = $model->getAllUpcomingEvents();
-        $data['all_recycling_centers'] = $model->getAllRecyclingCenters();
-        $data['all_city'] = $model->getAllCity();
+        $data['upcoming_events'] = $model->getAllUpcomingEvents();
+        $data['cities'] = $model->getAllCity();
+        $data['states'] = $model->getAllState();
+        $data['recycling_centers'] = $model->getAllRecyclingCenters();
 
         $data['waste_types'] = $wasteList->getWasteCategory();
 
@@ -30,32 +31,18 @@ class Home extends BaseController
 
     public function sendMessage()
     {
-        $rules = [
-            'name'    => 'required|min_length[3]|max_length[255]',
-            'email'   => 'required|valid_email|max_length[255]',
-            'subject' => 'required|max_length[255]',
-            'message' => 'required|min_length[10]'
-        ];
-
-        $response = [];
-
-        if (!$this->validate($rules)) {
-            $response = [
-                'status' => 'error',
-                'errors' => $this->validator->getErrors()
-            ];
-            return $this->response->setJSON($response);
-        }
-
         $model = new ContactMessageModel();
+        $wasteCategories = $this->request->getPost('waste_categories');
+        $jsonWaste = json_encode($wasteCategories); // encode as JSON
         $data = [
             'name'    => $this->request->getPost('name'),
             'email'   => $this->request->getPost('email'),
+            'mobile'   => $this->request->getPost('mobile'),
             'subject' => $this->request->getPost('subject'),
+            'waste_categories' =>   $jsonWaste,
             'message' => $this->request->getPost('message'),
             'status'  => 'new' // Default status for new messages
         ];
-
         if($model->insert($data)){
 			$response = [
                 'status' => 'success',
@@ -71,15 +58,29 @@ class Home extends BaseController
         return $this->response->setJSON($response);
     }
 
-    public function getStates()
+    public function get_category_wise_product()
     {
-        $city = $this->request->getPost('city'); // or getVar('city') if unsure
-        
-        $model = new CentersModel();
+        $city  = $this->request->getPost('cityName') ?? '';
+        $state = $this->request->getPost('stateName') ?? '';
+        $model = new HomeModel();
 
-        $states = $model->getStatesByCity($city);
+        $data['all_recycling_centers'] = $model->filterEvent($city,$state);
+        $html = view('/front/sections/recycling_centers', $data);
+        if (!empty($data['all_recycling_centers'])) {
+            $data = [
+                'status' => 1,
+                'msg'    => 'Successfully retrieved records',
+                'html'   => $html
+            ];
+        } else {
+            $data = [
+                'status' => 0,
+                'msg'    => 'No records found',
+                'html'   => ''
+            ];
+        }
 
-        return $this->response->setJSON($states);
+        return $this->response->setJSON($data);
     }
 }
 

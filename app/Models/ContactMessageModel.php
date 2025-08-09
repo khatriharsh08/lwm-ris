@@ -9,7 +9,7 @@ class ContactMessageModel extends Model
 
     protected $table = 'lwm_contactmessages';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'email', 'subject', 'message', 'status'];
+    protected $allowedFields = ['name', 'email', 'subject', 'message', 'status','mobile','waste_categories'];
 
     protected $useTimestamps = false;
 

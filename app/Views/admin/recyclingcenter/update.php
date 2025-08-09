@@ -19,9 +19,15 @@
                 </div>
             <?php endif ?>
 
-            <div class="form-group mb-3">
-                <label for="name">Center Name</label>
-                <input type="text" name="name" class="form-control" id="name" value="<?= esc(old('name', $center['name'])) ?>" required>
+            <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                    <label for="name">Center Name</label>
+                    <input type="text" name="name" class="form-control" id="name" value="<?= esc(old('name', $center['name'])) ?>" required>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                    <label for="waste_categories">Waste Categories</label>
+                    <input type="text" name="waste_categories" class="form-control" id="waste_categories" value="<?= esc(old('waste_categories', $center['waste_categories'])) ?>" required>
+                </div>
             </div>
             <div class="form-group mb-3">
                 <label for="address">Address</label>

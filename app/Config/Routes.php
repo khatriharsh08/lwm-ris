@@ -9,7 +9,8 @@ use CodeIgniter\Router\RouteCollection;
 // Front routes
 $routes->get('/', 'Front\Home::index');
 $routes->get('/front/home', 'Front\Home::index');
-$routes->post('/home/sendMessage', 'Front\Home::sendMessage');
+$routes->post('get-category-wise-product', 'Front\Home::get_category_wise_product');
+$routes->post('sendMessage', 'Front\Home::sendMessage');
 $routes->post('/home/getStates', 'Front\Home::getStates');
 
 

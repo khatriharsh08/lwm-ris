@@ -36,16 +36,26 @@ class HomeModel extends Model
                         ->getResultArray();
     }
 
-    public function getStatesByCity($city)
+    public function getAllState()
     {
         return $this->db->table('lwm_recyclingcenters')
                         ->select('state')
                         ->where('is_deleted', '0')
-                        ->where('city', $city)
                         ->distinct()
                         ->orderBy('state', 'ASC')
                         ->get()
                         ->getResultArray();
+    }
+
+    public function filterEvent($city,$state){
+        $builder = $this->db->table('lwm_recyclingcenters');
+        if(!empty($city)){
+            $builder->where('city',$city);
+        }
+        if(!empty($state)){
+            $builder->where('state',$state);
+        }
+        return $builder->get()->getResultArray();
     }
 
     public function getTotalCategories()

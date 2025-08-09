@@ -64,7 +64,7 @@
                             <td><?= $cate['name'] ?></td>
                             <td>
                                 <a href="<?= base_url('wastecategory/edit/'.$cate['id'])?>" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="<?= base_url('wastecategory/delete/'.$cate['id'])?>" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="<?= base_url('wastecategory/delete/'.$cate['id'])?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this center?');">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -73,9 +73,6 @@
             </div>
         </div>
 </div>
-
-<script src="<?= base_url('admin/assets/vendor/jquery/jquery.min.js') ?>"></script>
-<script src="<?= base_url('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
 <script>
     $(document).ready(function() {

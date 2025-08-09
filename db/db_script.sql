@@ -39,7 +39,7 @@ INSERT INTO lwm_wastecategories (id, name, description, created_at, updated_at, 
 
 
 -- Create table: lwm_recyclingcenters
-CREATE TABLE IF NOT EXISTS `lwm_recyclingcenters` (
+lwm_contactmessagesCREATE TABLE IF NOT EXISTS `lwm_recyclingcenters` (
   `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(255) NOT NULL,
   `address` VARCHAR(255) NOT NULL,

@@ -5,55 +5,45 @@
             <div class="col-lg-6 mb-4" id="contact-form-section">
                 <h4 class="mb-4">Send us a Message</h4>
                 <div id="form-messages" class="mb-3"></div>
-                    <form id="ajax-contact-form" action="<?= site_url('home/sendMessage') ?>" method="POST">
+                    <form id="ajax-contact-form" method="POST">
                         <?= csrf_field() ?>
 
                         <div class="mb-3">
-                            <input type="text" name="name" class="form-control green-input" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" class="form-control green-input" placeholder="Your Name*" required>
                             <div class="invalid-feedback">Please enter your name.</div>
                         </div>
 
-                        <div class="mb-3">
-                            <input type="email" name="email" class="form-control green-input" placeholder="Your Email" required>
-                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-2 mb-md-0">
+                                <input type="email" id="email" name="email" class="form-control green-input" placeholder="Your Email*">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="mobile" name="mobile" class="form-control green-input" placeholder="Your Number*">
+                            </div>
                         </div>
 
                         <div class="mb-3">
-                            <input type="text" name="subject" class="form-control green-input" placeholder="Subject" required>
+                            <input type="text" id="enquiry" name="subject" class="form-control green-input" placeholder="Subject*" required>
                             <div class="invalid-feedback">Please enter a subject.</div>
                         </div>
 
                         <div class="mb-3">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle green-input w-100 text-start" type="button" id="dropdownWasteCategories" data-bs-toggle="dropdown" aria-expanded="false" >
-                                    Select Categories
-                                </button>
-                                <ul class="dropdown-menu w-100 px-3 dropdown-menu-scrollable" aria-labelledby="dropdownWasteCategories">
-                                    <?php if (!empty($waste_types)): ?>
-                                        <?php foreach ($waste_types as $cat): ?>
-                                            <li>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="waste_categories[]" value="<?= esc($cat['id']) ?>" id="cat<?= esc($cat['id']) ?>">
-                                                    <label class="form-check-label" for="cat<?= esc($cat['id']) ?>">
-                                                        <?= esc($cat['name']) ?>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    <?php else: ?>
-                                        <li class="px-2 text-muted">No categories available.</li>
-                                    <?php endif; ?>
-                                </ul>
-                            </div>
-                            <div class="invalid-feedback">Please select a category.</div>
-                        </div>
+                            <select name="waste_categories[]" id="waste_categories" class="form-control green-input selectpicker" data-live-search="true" title="Select Waste*" style="color: #6c757d;">
+                                <option>Select Waste*</option>
+                                <?php foreach ($waste_types as $waste): ?>
+                                    <option value="<?= esc($waste['name']) ?>"><?= esc($waste['name']) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>                        
 
                         <div class="mb-3">
-                            <textarea name="message" class="form-control green-input" rows="5" placeholder="Your Message" required></textarea>
-                            <div class="invalid-feedback">Please enter your message.</div>
+                            <textarea name="message" id="message" class="form-control green-input" rows="5" placeholder="Your Message*" required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-success">Send Message</button>
+                        <div class="alert alert-danger hide" style="display: none;" role="alert" id="error_msg"></div>
+                        <div class="alert alert-success hide" style="display: none;" role="alert" id="success_msg"></div>
+
+                        <button type="button" onclick="submit_detail()" class="btn btn-success">Send Message</button>
                     </form>
                 </div>
 
@@ -71,107 +61,47 @@
     </div>
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('ajax-contact-form');
-    if (!form) return;
+<script type="text/javascript">
+    function submit_detail() {
+        $('#sucess_msg').html('').hide();
+        $('#error_msg').html('').hide();
 
-    const dropdownMenu = form.querySelector('.dropdown-menu');
-    const dropdownButton = document.getElementById('dropdownWasteCategories');
-    
-    if (!dropdownMenu || !dropdownButton) return;
+        // Basic validation
+        let name = $('#name').val().trim();
+        let email = $('#email').val().trim();
+        let enquiry = $('#enquiry').val().trim();
+        let mobile = $('#mobile').val().trim();
 
-    const checkboxes = dropdownMenu.querySelectorAll('input[type="checkbox"]');
-
-    function updateButtonText() {
-        const checkedCount = Array.from(checkboxes).filter(i => i.checked).length;
-
-        if (checkedCount === 0) {
-            dropdownButton.textContent = 'Select Categories';
-        } else {
-            dropdownButton.textContent = `${checkedCount} Categor${checkedCount > 1 ? 'ies' : 'y'} Selected`;
+        if (name === '' || email === '' || mobile === '' || enquiry === '') {
+            $('#error_msg').html('Please fill in all required fields.').css('color', 'red').show();
+            return false;
         }
-    }
 
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', updateButtonText);
-    });
+        let form = $('#ajax-contact-form')[0];
+        let formData = new FormData(form);
 
-    // Prevents the dropdown from closing when clicking inside it
-    dropdownMenu.addEventListener('click', function (e) {
-        e.stopPropagation();
-    });
-
-    // Run on page load in case of pre-filled forms
-    updateButtonText();
-});
-    
-document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('ajax-contact-form');
-    const messagesDiv = document.getElementById('form-messages');
-
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-        const url = this.getAttribute('action');
-        const submitButton = this.querySelector('button[type="submit"]');
-
-        submitButton.disabled = true;
-        submitButton.innerHTML = 'Sending...';
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            messagesDiv.innerHTML = '';
-
-            if (data.status === 'success') {
-                const successHtml = `<div class="alert alert-success" role="alert">${data.message}</div>`;
-                messagesDiv.innerHTML = successHtml;
-                contactForm.reset();
-
-                setTimeout(() => {
-                    messagesDiv.innerHTML = '';
-                }, 3000);
-            } else {
-                let errorsHtml = '<div class="alert alert-danger"><ul>';
-
-                if (data.errors) {
-                    for (const key in data.errors) {
-                        errorsHtml += `<li>${data.errors[key]}</li>`;
-                    }
-                } else if (data.message) {
-                    errorsHtml += `<li>${data.message}</li>`;
+        $.ajax({
+            url: "<?= base_url('sendMessage') ?>",
+            type: "POST",
+            data: formData,
+            async: false,
+            dataType: 'json',
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                if (response.status === 'success') {
+                    $("#ajax-contact-form")[0].reset();
+                    $('#sucess_msg').html(response.message).css('color', 'green').show();
+                    setTimeout(() => { $('#sucess_msg').fadeOut(); }, 3000);
                 } else {
-                    errorsHtml += '<li>An unknown error occurred.</li>';
+                    $('#error_msg').html(response.message).css('color', 'red').show();
+                    setTimeout(() => { $('#error_msg').fadeOut(); }, 3000);
                 }
-
-                errorsHtml += '</ul></div>';
-                messagesDiv.innerHTML = errorsHtml;
-
-                setTimeout(() => {
-                    messagesDiv.innerHTML = '';
-                }, 3000);
+            },
+            error: function () {
+                $('#error_msg').html('Something went wrong. Please try again.').css('color', 'red').show();
             }
-
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            messagesDiv.innerHTML = '<div class="alert alert-danger">An unexpected error occurred. Please try again.</div>';
-        })
-        .finally(() => {
-            submitButton.disabled = false;
-            submitButton.innerHTML = 'Send Message';
         });
-    });
-});
+    }
 
 </script>

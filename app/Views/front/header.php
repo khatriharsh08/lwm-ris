@@ -8,6 +8,7 @@
     
     <link href="front\bootstrap\css\bootstrap.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="front\fontawesome\css\all.min.css">
+    <link rel="stylesheet" href="front\swiper\swiper-bundle.min.css"> 
     <link href="<?= base_url('admin/assets/css/main.css') ?>" rel="stylesheet">
 
     <style>
@@ -74,12 +75,23 @@
             max-height: 250px;
             overflow-y: auto;
         }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none; /* Hides the default Swiper arrow */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background: transparent; /* Removes the white circle background */
+        }
+
     </style>
 </head>
 <body>
     <script src="front/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('admin/assets/vendor/jquery/jquery.min.js') ?>"></script>
     <script src="<?= base_url('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
         <div class="container">
@@ -94,14 +106,11 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link hover-green active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-green" href="#recyclingcenters">Search</a>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link hover-green" href="#events">Events</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link hover-green" href="#recyclingcenters">Centers</a>
                     </li>
                     <li class="nav-item">

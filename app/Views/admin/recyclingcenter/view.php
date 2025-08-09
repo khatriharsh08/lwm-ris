@@ -31,7 +31,7 @@
                 
                 <div class="col-md-3 mb-2">
                     <div class="text-xs font-weight-bold text-uppercase mb-1">Postal Code</div>
-                    <input type="number" name="postal_code" class="form-control" placeholder="Postal Code" value="<?= esc($postal_code ?? '') ?>">
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" name="postal_code" class="form-control" placeholder="Postal Code" value="<?= esc($postal_code ?? '') ?>">
                 </div>
                 
                 <div class="col-md-3 mb-2 text-right">

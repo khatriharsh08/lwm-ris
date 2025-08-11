@@ -21,6 +21,7 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('admin/assets/css/main.css') ?>" rel="stylesheet">
+    
 
 </head>
 
@@ -28,11 +29,9 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('admin/assets/vendor/jquery/jquery.min.js') ?>"></script>
-    <script src="<?= base_url('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
     <!-- Core plugin JavaScript-->
     <script src="<?= base_url('admin/assets/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url('admin/assets/js/sb-admin-2.min.js') ?>"></script>
+
 
     <!-- Page Wrapper -->
     <div id="wrapper">

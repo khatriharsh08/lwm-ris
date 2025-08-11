@@ -9,7 +9,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website <?= date('Y') ?></span>
+                        <span>Copyright &copy; Local Waste Management & Recycling Information System. <?= date('Y') ?></span>
                     </div>
                 </div>
             </footer>
@@ -46,8 +46,10 @@
         </div>
     </div>
 
-
-
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_url('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="<?= base_url('admin/assets/js/sb-admin-2.min.js') ?>"></script>
 
 </body>
 </html>

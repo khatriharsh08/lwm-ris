@@ -1,7 +1,7 @@
     <footer class="text-center py-4">
         <script src="<?= base_url('front/swiper/swiper-bundle.min.js') ?>"></script>
         <div class="container">
-            <p class="mb-0">&copy; 2025 LWM-RIS. All Rights Reserved.</p>
+            <p class="mb-0">&copy; 2025 Local Waste Management & Recycling Information System. All Rights Reserved.</p>
         </div>
     </footer>
      <script>

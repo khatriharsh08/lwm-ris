@@ -6,7 +6,6 @@ use CodeIgniter\Model;
 class DashboardModel extends Model
 {
     protected $DBGroup = 'default';
-
     
     public function getTotalCategories()
     {        

@@ -57,11 +57,13 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                                     </form>
+                                    
                                     <hr>
+                                    
                                     <div class="text-center">
                                         <a class="small" href="">Forgot Password?</a>
                                     </div>
-                                    <div class="text-center">
+                                    <div class="text-center" style="display:none;">
                                         <a class="small" href="">Create an Account!</a>
                                     </div>
                                 </div>

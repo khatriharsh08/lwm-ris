@@ -31,8 +31,8 @@
       </div>
 
       <div class="form-group">
-        <label for="password_txt"><strong>New Password (Plain Text)</strong></label>
-        <input type="text" name="password_txt" class="form-control" id="password_txt" placeholder="Leave blank to keep existing">
+        <label for="password"><strong>New Password (Plain Text)</strong></label>
+        <input type="text" name="password" class="form-control" id="password" placeholder="Leave blank to keep existing">
       </div>
 
       <div class="form-group">

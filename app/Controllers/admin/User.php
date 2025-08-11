@@ -45,16 +45,17 @@ class User extends BaseController
         ];
 
         // If password is entered
-        // $password = $this->request->getPost('password');
-        $password_txt = $this->request->getPost('password_txt');
+        $password = $this->request->getPost('password');
 
-        // if (!empty($password)) {
-        //     $data['password'] = password_hash($password, PASSWORD_DEFAULT);
-        // }
 
-        if (!empty($password_txt)) {
-            $data['password_txt'] = $password_txt;
+        if (!empty($password)) {
+            $data['password'] = password_hash($password, PASSWORD_DEFAULT);
         }
+
+        // $password_txt = $this->request->getPost('password_txt');
+        // if (!empty($password_txt)) {
+        //     $data['password_txt'] = $password_txt;
+        // }
 
         // Handle profile photo upload
         if ($this->request->getFile('profile_photo')->isValid()) {

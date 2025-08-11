@@ -29,11 +29,15 @@ class Login extends BaseController
         $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
+        // Hash password
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+
         $userModel = new UserModel();
         $user = $userModel->where('email',$email)->first();
 
         if($user){
-	        if ($password === $user['password_txt']) {
+	        if (password_verify($password, $user['password'])) {
 	            session()->set([
 	            	'logged_in'=> true,
 	            	'user_id' => $user['id'],

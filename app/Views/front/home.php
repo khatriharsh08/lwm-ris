@@ -76,7 +76,7 @@
                 <div class="swiper-wrapper">
                     <?php foreach ($upcoming_events as $chunk): ?>
                         <div class="swiper-slide">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-96 border-0 shadow-sm">
                                 <img src="<?= base_url('uploads/events/') . esc($chunk['poster_image']) ?>"
                                      class="card-img-top"
                                      alt="<?= esc($chunk['title']) ?>"
@@ -106,7 +106,7 @@
                     <span><i class="fas fa-chevron-right text-success fs-4"></i></span>
                     <span class="visually-hidden">Next</span>
                 </div>
-                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </div>
     </section>

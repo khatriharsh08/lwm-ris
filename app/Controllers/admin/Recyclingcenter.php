@@ -107,6 +107,7 @@ class Recyclingcenter extends BaseController
             'postal_code'  => $this->request->getPost('postal_code'),
             'phone_number' => $this->request->getPost('phone_number'),
             'email'        => $this->request->getPost('email'),
+            'waste_categories' => $this->request->getPost('waste_categories'),
         ];
 
         $model->update($id, $data);

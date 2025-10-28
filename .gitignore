@@ -1,0 +1,78 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# PHP / Composer
+/vendor/
+/composer.phar
+
+# Environment files (sensitive)
+.env
+.env.*
+.env.local
+.env.*.local
+
+# PHPUnit and coverage
+.phpunit.result.cache
+/coverage/
+coverage.xml
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Logs, cache, sessions (CodeIgniter / writable folder)
+/writable/
+/writable/*
+!/writable/.gitkeep
+/writable/debugbar/
+/writable/cache/
+/writable/logs/
+/writable/session/
+/writable/uploads/
+
+# User uploaded content (keep an optional .gitkeep if you want to track the folder)
+/uploads/*
+!/uploads/.gitkeep
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Misc backups and temp files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# IDE / tool specific
+phpstorm.meta.php
+/.idea/
+
+# Ignore build/dist folders
+/dist/
+build/
+
+# Composer vendor bin
+/bin/
+
+# Ignore system-generated files
+*.log
+
+# Keep the repository clean from local machine files
+.DS_Store
+Thumbs.db
+
+# End of .gitignore

@@ -32,7 +32,7 @@ class DashboardModel extends Model
     public function getTotalGetInTouchRequests()
     {       
         return $this->db->table('lwm_contactmessages')
-                        ->where('status', 'unread')
+                        ->where('status', 'pending')
                         ->countAllResults();
     }
 

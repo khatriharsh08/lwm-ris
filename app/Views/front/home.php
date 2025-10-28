@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="display-4" style="color: #1B5E20;">Join the Movement for a Cleaner Planet</h1>
         <p class="lead" style="color: #2E7D32;">Proper waste management is key to a sustainable future. Learn how you can make a difference today.</p>
-        <a href="#about" class="btn btn-success btn-lg mt-3 text-white">Learn More</a>
+        <a href="#" class="btn btn-success btn-lg mt-3 text-white">Learn More</a>
     </div>
 </header>
 
@@ -13,48 +13,48 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card border-left-success shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         Active Centers</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recycling_center_count; ?></div>
+                                    <div class="h5 mb-0 font-weight-bold text-black"><?= $recycling_center_count; ?></div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-map-marker-alt fa-2x text-gray-400"></i>
+                                    <i class="fas fa-map-marker-alt fa-2x text-success"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card border-left-info shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                         Different Categories</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $waste_category_count; ?></div>
+                                    <div class="h5 mb-0 font-weight-bold text-black"><?= $waste_category_count; ?></div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-list-alt fa-2x text-gray-400"></i>
+                                    <i class="fas fa-list-alt fa-2x text-info"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card border-left-secondary shadow h-100 py-2">
+                    <div class="card shadow h-100 py-2" style="border-left: 5px solid #8E44AD;">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1"  style="color: #8E44AD;">
                                         Successful Events/Drives</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $events_count; ?></div>
+                                    <div class="h5 mb-0 font-weight-bold text-black"><?= $events_count; ?></div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-calendar-check fa-2x text-gray-400"></i>
+                                    <i class="fas fa-calendar-check fa-2x"  style="color: #8E44AD;"></i>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                 </select>
 
                 <select name="state" id="state" class="form-control form-control-lg" style="max-width: 250px; border: 1px solid #2E7D32; color: #6c757d;" required>
-                    <option value="">-- Select City --</option>
+                    <option value="">-- Select State --</option>
                     <?php foreach ($states as $state): ?>
                         <option value="<?= esc($state['state']) ?>" <?= (isset($selectedState) && $selectedState === $state['state']) ? 'selected' : '' ?> data-state-name="<?= esc($state['state']) ?>">
                             <?= esc($state['state']) ?>

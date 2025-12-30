@@ -13,7 +13,8 @@
                         These should be clean and free from food residue before disposal to facilitate recycling and reduce contamination.
                     </p>
                     <div>
-                        <!-- <a href="<?= base_url('home/dryWaste') ?>"><small class="text-muted">Learn more about dry waste management.</small></a>                       -->
+                        <!-- <a id="learnDryWasteManagement"><small class="text-muted">Learn more about dry waste management.</small></a> -->
+                        <button type="button" id="learnDryWasteManagement" style="border: 0; background-color: transparent;"><small class="text-muted">Learn more about dry waste management.</small></button>                      
                     </div>
                 </div>
             </div>
@@ -30,6 +31,7 @@
                     </p>
                     <div>
                         <!-- <a href="<?= base_url('home/wetWaste') ?>"><small class="text-muted">Learn more about wet waste management.</small></a> -->
+                        <button type="button" id="learnWetWasteManagement" style="border: 0; background-color: transparent;"><small class="text-muted">Learn more about wet waste management.</small></button>                      
                     </div>
                 </div>
             </div>
@@ -46,9 +48,56 @@
                     </p>
                     <div>
                         <!-- <a href="<?= base_url('home/hazardousWaste') ?>"><small class="text-muted">Learn more about hazardous waste management.</small></a> -->
+                        <button type="button" id="learnHazardousWasteManagement" style="border: 0; background-color: transparent;"><small class="text-muted">Learn more about hazardous waste management.</small></button>                      
                     </div>
                 </div>
             </div>            
         </div>
     </div>
 </section>
+
+
+<script>
+    $(document).ready(function() {
+        $('#learnDryWasteManagement').click(function() {
+            $.ajax({
+                url: '<?= site_url('/home/showdrywaste') ?>',
+                method: 'GET',
+                success: function(response) {
+                    if ($('#learnDryWasteManagementModal').length === 0) {
+                        $('body').append(response);
+                    }
+                    $('#learnDryWasteManagementModal').modal('show');
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $('#learnWetWasteManagement').click(function() {
+            $.ajax({
+                url: '<?= site_url('/home/showwetwaste') ?>',
+                method: 'GET',
+                success: function(response) {
+                    if ($('#learnWetWasteManagementModal').length === 0) {
+                        $('body').append(response);
+                    }
+                    $('#learnWetWasteManagementModal').modal('show');
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $('#learnHazardousWasteManagement').click(function() {
+            $.ajax({
+                url: '<?= site_url('/home/showhazardouswaste') ?>',
+                method: 'GET',
+                success: function(response) {
+                    if ($('#learnHazardousWasteManagementModal').length === 0) {
+                        $('body').append(response);
+                    }
+                    $('#learnHazardousWasteManagementModal').modal('show');
+                }
+            });
+        });
+    });
+</script>

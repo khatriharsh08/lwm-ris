@@ -76,20 +76,20 @@
                 <div class="swiper-wrapper">
                     <?php foreach ($upcoming_events as $chunk): ?>
                         <div class="swiper-slide">
-                            <div class="card h-96 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <img src="<?= base_url('uploads/events/') . esc($chunk['poster_image']) ?>"
                                      class="card-img-top"
                                      alt="<?= esc($chunk['title']) ?>"
-                                     style="height: 300px; object-fit: cover;">
-                                <div class="card-body p-4">
-                                    <h5 class="card-title fw-bold"><?= esc($chunk['title']) ?></h5>
-                                    <p class="card-text"><?= esc($chunk['description']) ?></p>
-                                    <p class="card-text text-muted small">
-                                        <i class="fas fa-calendar-alt fa-fw me-2"></i>
-                                        <?= date('M d, Y', strtotime($chunk['date'])) ?>
+                                     style="height: 200px; object-fit: cover;">
+                                <div class="card-body p-3">
+                                    <h5 class="card-title fw-bold mb-2"><?= esc($chunk['title']) ?></h5>
+                                    <p class="card-text small text-truncate"><?= esc($chunk['description']) ?></p>
+                                    <p class="card-text text-muted small mb-1">
+                                        <i class="fas fa-calendar-alt fa-fw me-2 text-success"></i>
+                                        <?= date('M d, Y - h:i A', strtotime($chunk['date'])) ?>
                                     </p>
-                                    <p class="card-text text-muted small">
-                                        <i class="fas fa-map-marker-alt fa-fw me-2"></i>
+                                    <p class="card-text text-muted small mb-3">
+                                        <i class="fas fa-map-marker-alt fa-fw me-2 text-success"></i>
                                         <?= esc($chunk['venue']) ?>
                                     </p>
                                 </div>

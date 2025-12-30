@@ -21,6 +21,7 @@ class Home extends BaseController
         $data['recycling_centers'] = $model->getAllRecyclingCenters();
 
         $data['waste_types'] = $wasteList->getWasteCategory();
+        $data['waste_categories'] = $wasteList->getWasteCategory(); // For contact form dropdown
 
         $data['waste_category_count'] = $model->getTotalCategories();
         $data['recycling_center_count'] = $model->getTotalRecyclingCenters();
@@ -31,17 +32,74 @@ class Home extends BaseController
 
     public function sendMessage()
     {
+        // Server-side validation rules
+        $rules = [
+            'name' => [
+                'label' => 'Name',
+                'rules' => 'required|min_length[2]|max_length[100]',
+                'errors' => [
+                    'required' => 'Please enter your name.',
+                    'min_length' => 'Name must be at least 2 characters.',
+                    'max_length' => 'Name cannot exceed 100 characters.'
+                ]
+            ],
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email|max_length[100]',
+                'errors' => [
+                    'required' => 'Please enter your email address.',
+                    'valid_email' => 'Please enter a valid email address.',
+                    'max_length' => 'Email cannot exceed 100 characters.'
+                ]
+            ],
+            'phone_number' => [
+                'label' => 'Phone Number',
+                'rules' => 'required|numeric|exact_length[10]',
+                'errors' => [
+                    'required' => 'Please enter your phone number.',
+                    'numeric' => 'Phone number must contain only digits.',
+                    'exact_length' => 'Phone number must be exactly 10 digits.'
+                ]
+            ],
+            'subject' => [
+                'label' => 'Subject',
+                'rules' => 'permit_empty|max_length[200]',
+                'errors' => [
+                    'max_length' => 'Subject cannot exceed 200 characters.'
+                ]
+            ],
+            'message' => [
+                'label' => 'Message',
+                'rules' => 'required|min_length[10]|max_length[2000]',
+                'errors' => [
+                    'required' => 'Please enter your message.',
+                    'min_length' => 'Message must be at least 10 characters.',
+                    'max_length' => 'Message cannot exceed 2000 characters.'
+                ]
+            ]
+        ];
+
+        if (!$this->validate($rules)) {
+            $errors = $this->validator->getErrors();
+            $errorMessages = implode('<br>', array_values($errors));
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => $errorMessages,
+                'errors' => $errors
+            ]);
+        }
+
         $model = new ContactMessageModel();
         $wasteCategories = $this->request->getPost('waste_categories');
-        $jsonWaste = json_encode($wasteCategories); // encode as JSON
+        $jsonWaste = json_encode($wasteCategories);
         $data = [
             'name'    => $this->request->getPost('name'),
             'email'   => $this->request->getPost('email'),
-            'mobile'   => $this->request->getPost('mobile'),
+            'mobile'   => $this->request->getPost('phone_number'),
             'subject' => $this->request->getPost('subject'),
-            'waste_categories' =>   $jsonWaste,
+            'waste_categories' => $jsonWaste,
             'message' => $this->request->getPost('message'),
-            'status'  => 'new' // Default status for new messages
+            'status'  => 'new'
         ];
         if($model->insert($data)){
 			$response = [
@@ -81,6 +139,21 @@ class Home extends BaseController
         }
 
         return $this->response->setJSON($data);
+    }
+
+    public function showdrywaste()
+    {        
+        return view('front/sections/pages/drywastepage');
+    }
+
+    public function showwetwaste()
+    {        
+        return view('front/sections/pages/wetwastepage');
+    }
+
+    public function showhazardouswaste()
+    {        
+        return view('front/sections/pages/hazardouswastepage');
     }
 }
 

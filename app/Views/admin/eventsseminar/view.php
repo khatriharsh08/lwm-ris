@@ -1,64 +1,8 @@
 <?= $this->extend('admin/layout') ?>
 <?= $this->section('content') ?>
 <?= $this->include('admin/messages') ?>
-<!-- Content Row -->
-                    <div class="row">
 
-                        <!-- Completed Events Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Completed Events</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_completed_events; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-check-circle fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Upcoming Events Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Upcoming Events</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_upcoming_events; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-clock fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Total Events Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Total Events</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_events; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-thumbtack fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-
+<!-- Page Header -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Events</h1>
     <div>
@@ -71,6 +15,64 @@
     </div>
 </div>
 
+<!-- Stats Cards Row -->
+<div class="row">
+    <!-- Completed Events Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-primary text-uppercase mb-1">
+                            Completed Events</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_completed_events; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-check-circle fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-success text-uppercase mb-1">
+                            Upcoming Events</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_upcoming_events; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-clock fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Events Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-info text-uppercase mb-1">
+                            Total Events</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_events; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-thumbtack fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Search Filter Form (Collapsible) -->
 <div class="card mb-4" id="searchFormContainer" style="display: none;">
     <div class="card-body">
         <form method="post" action="<?= base_url('/eventsseminar') ?>">
@@ -78,7 +80,13 @@
     
                 <div class="col-md-3 mb-2">
                     <div class="text-xs font-weight-bold text-uppercase mb-1">Event Title</div>
-                   <input type="text" name="title" class="form-control" placeholder="Event Title" value="<?= esc($title ?? '') ?>">                
+                   <input type="text" name="title" class="form-control" placeholder="Type to search..." 
+                          list="eventTitleList" autocomplete="off" value="<?= esc($title ?? '') ?>">
+                   <datalist id="eventTitleList">
+                       <?php foreach($all_events as $event): ?>
+                       <option value="<?= esc($event['title']) ?>">
+                       <?php endforeach; ?>
+                   </datalist>
                 </div>
 
                 <div class="col-md-3 mb-2">
@@ -102,7 +110,7 @@
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <div class="table-responsive">
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>

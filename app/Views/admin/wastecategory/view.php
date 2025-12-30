@@ -23,7 +23,13 @@
     
                 <div class="col-md-3 mb-2">
                     <div class="text-xs font-weight-bold text-uppercase mb-1">Category Name</div>
-                    <input type="text" name="name" class="form-control" placeholder="Category Name" value="<?= esc($name ?? '') ?>">                
+                    <input type="text" name="name" class="form-control" placeholder="Type to search..." 
+                           list="categoryList" autocomplete="off" value="<?= esc($name ?? '') ?>">
+                    <datalist id="categoryList">
+                        <?php foreach($wastecategory as $cat): ?>
+                        <option value="<?= esc($cat['name']) ?>">
+                        <?php endforeach; ?>
+                    </datalist>
                 </div>
 
                 <div class="col-md-3 mb-2">
@@ -48,7 +54,7 @@
 
 <div class="card shadow-sm">
         <div class="card-body">
-            <div class="table-responsive">
+            <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>

@@ -1,82 +1,6 @@
 <?= $this->extend('admin/layout') ?>
 <?= $this->section('content') ?>
-<?= $this->include('admin/messages') ?>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- New Messages Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                New Messages</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_new_messages; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-envelope-open fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Pending Messages Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Pending Messages</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_pending_messages; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-envelope-open fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Done Messages Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Done Messages</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_done_messages; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-envelope fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Total Messages Card Example -->
-                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Total Messages</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_messages; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-fw fa-envelope fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
+<?= $this->include('admin/messages') ?> 
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Contact Messages</h1>
@@ -87,6 +11,82 @@
     </div>
 </div>
 
+<!-- Stats Cards Row -->
+<div class="row">
+    <!-- New Messages Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-primary text-uppercase mb-1">
+                            New Messages</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_new_messages; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-envelope-open fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pending Messages Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-primary text-uppercase mb-1">
+                            Pending Messages</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_pending_messages; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-envelope-open fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Done Messages Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-success text-uppercase mb-1">
+                            Done Messages</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_done_messages; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-envelope fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Messages Card -->
+     <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xm font-weight-bold text-info text-uppercase mb-1">
+                            Total Messages</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-800"><?= $total_messages; ?></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-fw fa-envelope fa-3x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Search Filter Form (Collapsible) -->
 <div class="card mb-4" id="searchFormContainer" style="display: none;">
     <div class="card-body">
         <form method="post" action="<?= base_url('/contactmessage') ?>">
@@ -123,7 +123,7 @@
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <div class="table-responsive">            
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>

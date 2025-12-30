@@ -22,6 +22,181 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_url('admin/assets/css/main.css') ?>" rel="stylesheet">
     
+    <!-- Responsive Admin Styles -->
+    <style>
+        /* ============================================
+           ADMIN RESPONSIVE STYLES
+        ============================================ */
+        
+        /* Mobile Flash Messages */
+        @media (max-width: 576px) {
+            #flash-message-container {
+                width: calc(100% - 20px) !important;
+                right: 10px !important;
+                left: 10px !important;
+                top: 70px !important;
+            }
+            .flash-message {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Sidebar Mobile */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 0 !important;
+            }
+            .sidebar.toggled {
+                width: 6.5rem !important;
+            }
+        }
+        
+        /* Content Area Mobile */
+        @media (max-width: 768px) {
+            #content-wrapper {
+                padding: 0 !important;
+            }
+            .container-fluid {
+                padding: 0.75rem !important;
+            }
+        }
+        
+        /* Cards Responsive */
+        @media (max-width: 576px) {
+            .card {
+                margin-bottom: 1rem;
+            }
+            .card-header {
+                padding: 0.75rem;
+            }
+            .card-body {
+                padding: 0.75rem;
+            }
+            .card-header h6 {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Stats Cards Mobile */
+        @media (max-width: 576px) {
+            .h5.mb-0.font-weight-bold {
+                font-size: 1.1rem;
+            }
+            .text-xs {
+                font-size: 0.65rem;
+            }
+            .fa-2x {
+                font-size: 1.5rem !important;
+            }
+        }
+        
+        /* Table Responsive */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        @media (max-width: 768px) {
+            table.dataTable {
+                font-size: 0.8rem;
+            }
+            table th, table td {
+                padding: 0.4rem !important;
+                white-space: nowrap;
+            }
+            .dataTables_wrapper .dataTables_length,
+            .dataTables_wrapper .dataTables_filter {
+                float: none !important;
+                text-align: left !important;
+                margin-bottom: 0.5rem;
+            }
+            .dataTables_wrapper .dataTables_filter input {
+                width: 100% !important;
+            }
+        }
+        
+        /* Modal Responsive */
+        @media (max-width: 576px) {
+            .modal-dialog {
+                margin: 0.5rem;
+                max-width: calc(100% - 1rem);
+            }
+            .modal-header {
+                padding: 0.75rem;
+            }
+            .modal-body {
+                padding: 0.75rem;
+            }
+            .modal-footer {
+                padding: 0.5rem;
+            }
+            .modal-title {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Form Controls Mobile */
+        @media (max-width: 576px) {
+            .form-control {
+                font-size: 0.9rem;
+            }
+            .form-group label {
+                font-size: 0.85rem;
+            }
+            .btn {
+                padding: 0.4rem 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Page Heading Mobile */
+        @media (max-width: 576px) {
+            .h3.mb-0 {
+                font-size: 1.25rem;
+            }
+            .d-sm-inline-block {
+                display: block !important;
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+        }
+        
+        /* Topbar Mobile */
+        @media (max-width: 576px) {
+            .topbar {
+                height: auto;
+                padding: 0.5rem;
+            }
+            .topbar .nav-item .nav-link {
+                padding: 0.5rem;
+            }
+            .dropdown-menu {
+                min-width: 100%;
+            }
+        }
+        
+        /* Search Form Mobile */
+        @media (max-width: 768px) {
+            .card-header .row {
+                flex-direction: column;
+            }
+            .card-header .col-md-4,
+            .card-header .col-md-3 {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        /* Action Buttons Mobile */
+        @media (max-width: 576px) {
+            .btn-group .btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+            }
+            .btn i {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 
 </head>
 
@@ -87,6 +262,21 @@
                     <span>Contact Messages</span></a>
             </li>
 
+            <?php if (session()->get('is_master')): ?>
+            <!-- Master Admin Only -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= site_url('admins') ?>">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Manage Admins</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= site_url('activitylog') ?>">
+                    <i class="fas fa-history"></i>
+                    <span>Activity Logs</span></a>
+            </li>
+            <?php endif; ?>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -140,11 +330,10 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
+                        <!-- Nav Item - User Dropdown -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=session()->get('user_name') ?></span> -->
                                 <img class="img-profile rounded-circle"
                                     src="<?= base_url('uploads/users/'.session()->get('user_photo')) ?>">
                             </a>

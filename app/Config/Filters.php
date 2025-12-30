@@ -13,6 +13,8 @@ use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\AuthGuard;
+use App\Filters\MasterAdminGuard;
+use App\Filters\PublicAuth;
 
 
 class Filters extends BaseFilters
@@ -37,6 +39,8 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'auth'          => AuthGuard::class,
+        'masteradmin'   => MasterAdminGuard::class,
+        'publicauth'    => PublicAuth::class,
     ];
 
     /**

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Event Model
+ * Manages events/seminars data in lwm_events table
+ * Includes stats methods and search filtering
+ */
 
 namespace App\Models;
 
@@ -20,12 +25,18 @@ class EventModel extends Model
 
     protected $useTimestamps = true;
 
+    /**
+     * Get total count of all active events
+     */
     public function getTotalEvents()
     {
         return $this->where('is_deleted', '0')
                     ->countAllResults();
     }
 
+    /**
+     * Get count of events that have already occurred
+     */
     public function getTotalCompletedEvents()
     {
         return $this->where('date < NOW()')
@@ -33,6 +44,9 @@ class EventModel extends Model
                     ->countAllResults();
     }
 
+    /**
+     * Get count of future/upcoming events
+     */
     public function getTotalUpcomingEvents()
     {
         return $this->where('date >= NOW()')
@@ -40,11 +54,18 @@ class EventModel extends Model
                     ->countAllResults();
     }
 
+    /**
+     * Get filtered events based on search criteria
+     * Excludes soft-deleted records
+     * 
+     * @param array $filters Search filters (title, start_date, end_date)
+     * @return array Matching events
+     */
     public function getFilteredEventCategories($filters = [])
     {
-        $builder = $this->builder(); // same as $this->db->table($this->table)
+        $builder = $this->builder();
 
-        $builder->where('is_deleted', '0'); // always filter out deleted rows
+        $builder->where('is_deleted', '0');
 
         if (!empty($filters['title'])) {
             $builder->like('title', $filters['title']);
@@ -56,9 +77,9 @@ class EventModel extends Model
         }
 
         if (!empty($filters['end_date'])) {
-        $endDate = $filters['end_date'] . ' 23:59:59';
-        $builder->where('date <=', $endDate);
-    }
+            $endDate = $filters['end_date'] . ' 23:59:59';
+            $builder->where('date <=', $endDate);
+        }
 
         $builder->orderBy('id', 'DESC');
 

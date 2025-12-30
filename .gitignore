@@ -1,78 +1,73 @@
-# Operating system files
+# ===========================================
+# LWM-RIS .gitignore (CodeIgniter 4 Project)
+# ===========================================
+
+# ----- Operating System Files -----
 .DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Editor / IDE directories
+# ----- Editor / IDE -----
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
 *.code-workspace
 
-# PHP / Composer
+# ----- PHP / Composer -----
 /vendor/
-/composer.phar
+composer.phar
 
-# Environment files (sensitive)
+# ----- Environment Files (Sensitive) -----
 .env
 .env.*
-.env.local
-.env.*.local
+!.env.example
 
-# PHPUnit and coverage
+# ----- PHPUnit / Testing -----
 .phpunit.result.cache
 /coverage/
 coverage.xml
 
-# Node / JS
+# ----- Node / JavaScript -----
 node_modules/
 npm-debug.log*
 yarn-error.log
 
-# Logs, cache, sessions (CodeIgniter / writable folder)
-/writable/
-/writable/*
+# ----- CodeIgniter Writable Folder -----
+/writable/cache/*
+/writable/logs/*
+/writable/session/*
+/writable/debugbar/*
+/writable/uploads/*
 !/writable/.gitkeep
-/writable/debugbar/
-/writable/cache/
-/writable/logs/
-/writable/session/
-/writable/uploads/
+!/writable/*/.gitkeep
 
-# User uploaded content (keep an optional .gitkeep if you want to track the folder)
+# ----- User Uploads -----
 /uploads/*
 !/uploads/.gitkeep
 
-# Database files
+# ----- Database Files -----
 *.sqlite
 *.sqlite3
 *.db
 
-# Misc backups and temp files
+# ----- Temp / Backup Files -----
 *~
 *.swp
 *.swo
 *.bak
+*.BAK
 *.tmp
-
-# IDE / tool specific
-phpstorm.meta.php
-/.idea/
-
-# Ignore build/dist folders
-/dist/
-build/
-
-# Composer vendor bin
-/bin/
-
-# Ignore system-generated files
 *.log
 
-# Keep the repository clean from local machine files
-.DS_Store
-Thumbs.db
+# ----- Distribution / Build -----
+/dist/
+/build/
+/bin/
+
+# ----- Temporary Export Folders -----
+DBExportTemp*/
+*TempForAi/
 
 # End of .gitignore

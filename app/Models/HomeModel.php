@@ -1,4 +1,9 @@
 <?php
+/**
+ * Home Model
+ * Provides data for the public-facing home page
+ * Retrieves events, recycling centers, and statistics for visitors
+ */
 
 namespace App\Models;
 
@@ -8,6 +13,9 @@ class HomeModel extends Model
 {
     protected $DBGroup = 'default';
 
+    /**
+     * Get all upcoming events for public display
+     */
     public function getAllUpcomingEvents()
     {
         return $this->db->table('lwm_events')
@@ -17,6 +25,9 @@ class HomeModel extends Model
                         ->getResultArray();
     }
 
+    /**
+     * Get all active recycling centers for public display
+     */
     public function getAllRecyclingCenters()
     {
         return $this->db->table('lwm_recyclingcenters')
@@ -25,6 +36,9 @@ class HomeModel extends Model
                         ->getResultArray();
     }
 
+    /**
+     * Get distinct cities for location filter dropdown
+     */
     public function getAllCity()
     {
         return $this->db->table('lwm_recyclingcenters')
@@ -36,6 +50,9 @@ class HomeModel extends Model
                         ->getResultArray();
     }
 
+    /**
+     * Get distinct states for location filter dropdown
+     */
     public function getAllState()
     {
         return $this->db->table('lwm_recyclingcenters')
@@ -47,6 +64,9 @@ class HomeModel extends Model
                         ->getResultArray();
     }
 
+    /**
+     * Filter recycling centers by city and/or state
+     */
     public function filterEvent($city,$state){
         $builder = $this->db->table('lwm_recyclingcenters');
         if(!empty($city)){
@@ -58,6 +78,9 @@ class HomeModel extends Model
         return $builder->get()->getResultArray();
     }
 
+    /**
+     * Get total count of waste categories for homepage stats
+     */
     public function getTotalCategories()
     {        
         return $this->db->table('lwm_wastecategories')
@@ -65,7 +88,9 @@ class HomeModel extends Model
                         ->countAllResults(); 
     }
 
-  
+    /**
+     * Get total count of recycling centers for homepage stats
+     */
     public function getTotalRecyclingCenters()
     {       
         return $this->db->table('lwm_recyclingcenters')
@@ -73,6 +98,9 @@ class HomeModel extends Model
                         ->countAllResults();
     }
 
+    /**
+     * Get total count of completed events for homepage stats
+     */
     public function getTotalEvents()
     {       
         return $this->db->table('lwm_events')

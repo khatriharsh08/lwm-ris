@@ -51,5 +51,39 @@
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('admin/assets/js/sb-admin-2.min.js') ?>"></script>
 
+    <!-- Global Number Input Validation -->
+    <script>
+    $(document).ready(function() {
+        // Selector for all number-only input fields (phone, postal code, etc.)
+        var numberInputSelector = 'input[name*="phone"], input[name*="postal"], input[name*="pincode"], input[name*="mobile"], input[type="tel"], input[inputmode="numeric"]';
+        
+        // Prevent non-numeric key presses
+        $(document).on('keypress', numberInputSelector, function(e) {
+            var charCode = (e.which) ? e.which : e.keyCode;
+            // Allow only numbers (0-9)
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                e.preventDefault();
+                return false;
+            }
+            return true;
+        });
+        
+        // Clean non-numeric characters on input (handles paste, etc.)
+        $(document).on('input', numberInputSelector, function() {
+            var cleaned = $(this).val().replace(/[^0-9]/g, '');
+            $(this).val(cleaned);
+        });
+        
+        // Handle paste events - clean pasted content
+        $(document).on('paste', numberInputSelector, function(e) {
+            var $this = $(this);
+            setTimeout(function() {
+                var cleaned = $this.val().replace(/[^0-9]/g, '');
+                $this.val(cleaned);
+            }, 10);
+        });
+    });
+    </script>
+
 </body>
 </html>

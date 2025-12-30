@@ -21,17 +21,35 @@
     
                 <div class="col-md-3 mb-2">
                     <div class="text-xs font-weight-bold text-uppercase mb-1">Center Name</div>
-                   <input type="text" name="name" class="form-control" placeholder="Center Name" value="<?= esc($name ?? '') ?>">                
+                   <input type="text" name="name" class="form-control" placeholder="Type to search..." 
+                          list="centerNameList" autocomplete="off" value="<?= esc($name ?? '') ?>">
+                   <datalist id="centerNameList">
+                       <?php foreach($all_centers as $center): ?>
+                       <option value="<?= esc($center['name']) ?>">
+                       <?php endforeach; ?>
+                   </datalist>
                 </div>
 
                 <div class="col-md-3 mb-2">
                     <div class="text-xs font-weight-bold text-uppercase mb-1">City</div>
-                    <input type="text" name="city" class="form-control" placeholder="City" value="<?= esc($city?? '') ?>">
+                    <input type="text" name="city" class="form-control" placeholder="Type to search..."
+                           list="cityList" autocomplete="off" value="<?= esc($city ?? '') ?>">
+                    <datalist id="cityList">
+                        <?php foreach($all_cities as $cityName): ?>
+                        <option value="<?= esc($cityName) ?>">
+                        <?php endforeach; ?>
+                    </datalist>
                 </div>
                 
                 <div class="col-md-3 mb-2">
                     <div class="text-xs font-weight-bold text-uppercase mb-1">Postal Code</div>
-                    <input type="text" inputmode="numeric" pattern="[0-9]*" name="postal_code" class="form-control" placeholder="Postal Code" value="<?= esc($postal_code ?? '') ?>">
+                    <input type="text" inputmode="numeric" name="postal_code" class="form-control" placeholder="Type to search..."
+                           list="postalCodeList" autocomplete="off" value="<?= esc($postal_code ?? '') ?>">
+                    <datalist id="postalCodeList">
+                        <?php foreach($all_postal_codes as $postalCode): ?>
+                        <option value="<?= esc($postalCode) ?>">
+                        <?php endforeach; ?>
+                    </datalist>
                 </div>
                 
                 <div class="col-md-3 mb-2 text-right">
@@ -45,7 +63,7 @@
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <div class="table-responsive">
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
